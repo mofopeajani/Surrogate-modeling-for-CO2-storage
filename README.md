@@ -1,4 +1,4 @@
-# Accelerating CO₂ Storage Optimization with Deep Learning–Based Surrogates (Computer Vision)  
+# Accelerating CO₂ Storage Optimization with Deep Learning–Based Surrogates
 
 **Authors:** Mofopefoluwa Ajani — Energy Science & Engineering, Stanford University; Victor Awosiji — Earth & Planetary Sciences, Stanford University  
 
