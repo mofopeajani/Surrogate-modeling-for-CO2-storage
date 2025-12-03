@@ -47,11 +47,11 @@ We will evaluate two surrogate architectures specifically designed for high-dime
 
 A convolutional architecture capable of capturing multi-scale spatial patterns through skip-connections and residual blocks.  
 
-### (b) U-FNO (3D Fourier Neural Operator)  
+### (b) 3D Patch-Based Transformer
 
-A physics-informed neural operator architecture that learns mappings between function spaces using fast global convolutions in Fourier space.  
+A Vision-Transformer–style encoder architecture that operates on 3D patches of the reservoir state. The input volume is first decomposed into non-overlapping 3D patches and linearly embedded into a sequence of tokens. These tokens are processed by a stack of multi-head self-attention and feed-forward layers, enabling the model to capture long-range spatial dependencies and interactions between wells and the surrounding geomodel. A final projection layer “unpatchifies” the token representations back to a full 3D grid of pressure and CO₂ saturation predictions. 
 
-**Inputs** to both models will include:  
+**Inputs** to both models include:  
 
 - Static geomodel (porosity/permeability fields)  
 - Spatial coordinates  
