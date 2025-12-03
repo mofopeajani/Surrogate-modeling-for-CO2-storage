@@ -4,7 +4,7 @@
 
 ## 1. Background and Problem Statement  
 
-We propose building a deep learning surrogate model for CO₂ storage simulations, capable of predicting reservoir pressure evolution, CO₂ saturation, and optimal well placement and control strategies. The model will learn to approximate a high-fidelity multiphase flow simulator (GEOS) by mapping well configurations and time-dependent injection schedules to full spatiotemporal fields of pressure and CO₂ saturation.  
+We propose two deep learning surrogate models for CO₂ storage simulations, capable of predicting reservoir pressure evolution, CO₂ saturation, and optimal well placement and control strategies. The models learned to approximate a high-fidelity multiphase flow simulator (GEOS) by mapping well configurations and time-dependent injection schedules to full spatiotemporal fields of pressure and CO₂ saturation.  
 
 Accurate prediction of these quantities is essential because pressure buildup can induce CO₂ leakage risks, including groundwater contamination or surface seepage. High-fidelity reservoir simulations are computationally expensive, limiting real-time decision making and uncertainty quantification.  
 
@@ -49,7 +49,7 @@ A convolutional architecture capable of capturing multi-scale spatial patterns t
 
 ### (b) 3D Patch-Based Transformer
 
-A Vision-Transformer–style encoder architecture that operates on 3D patches of the reservoir state. The input volume is first decomposed into non-overlapping 3D patches and linearly embedded into a sequence of tokens. These tokens are processed by a stack of multi-head self-attention and feed-forward layers, enabling the model to capture long-range spatial dependencies and interactions between wells and the surrounding geomodel. A final projection layer “unpatchifies” the token representations back to a full 3D grid of pressure and CO₂ saturation predictions. 
+A [Vision-Transformer–style](https://arxiv.org/abs/2010.11929) encoder architecture that operates on 3D patches of the reservoir state. The input volume is first decomposed into non-overlapping 3D patches and linearly embedded into a sequence of tokens. These tokens are processed by a stack of multi-head self-attention and feed-forward layers, enabling the model to capture long-range spatial dependencies and interactions between wells and the surrounding geomodel. A final projection layer “unpatchifies” the token representations back to a full 3D grid of pressure and CO₂ saturation predictions. 
 
 **Inputs** to both models include:  
 
