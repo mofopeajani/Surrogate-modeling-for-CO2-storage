@@ -65,7 +65,7 @@ Both models are trained to minimize errors relative to GEOS output, enabling acc
 
 ## 5. Evaluation  
 
-Model accuracy will be assessed using:  
+Model accuraccies were assessed using:  
 
 - **RMSE**, **MAE**, **R²** for pressure and CO₂ saturation  
 - **SSIM** for structural similarity  
